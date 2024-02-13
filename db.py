@@ -12,7 +12,7 @@ db = client.Cluster0
 USERS = db.Users
 PROMPTS = db.Prompts
 
-COST_PER_TOKEN = 0.000002
+COST_PER_TOKEN = 0.000001
 
 def parse_json(data):
     return json.loads(bson_dumps(data))
