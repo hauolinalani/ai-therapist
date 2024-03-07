@@ -2,8 +2,9 @@ from flask import Flask, request, Response, jsonify
 from flask_cors import CORS
 import stripe
 
-import json
+
 from dotenv import load_dotenv
+import json
 from posthog import Posthog
 from therapist import create_new_user, therapize, add_email_and_credits
 from db import USERS, PROMPTS, delete_user_message_history, store_usage, add_credits
