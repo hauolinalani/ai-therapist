@@ -1,0 +1,26 @@
+{
+  "name": "ai-therapist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "react-router-dom": "^6.22.2",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hauolinalani/ai-therapist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hauolinalani/ai-therapist/issues"
+  },
+  "homepage": "https://github.com/hauolinalani/ai-therapist#readme"
+}

@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Main from './pages/Main';
+import Success from './pages/Success';
+import LegalPage from './pages/Legal'
+import posthog from 'posthog-js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+posthog.init('phc_l7GgIb4y7bvAIlCDWLn4Ie2mHwoGlUVZXOSSKeiDc2p', { api_host: 'https://app.posthog.com' })
+const App = () => {
+  
+	return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/legal" element={<LegalPage />} />
+        </Routes>
+      </Router>
+
+	);
+};
 
 export default App;
