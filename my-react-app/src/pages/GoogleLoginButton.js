@@ -1,16 +1,15 @@
-// GoogleLogin.js
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import useUserInfo from '../useUserInfo';
 import posthog from 'posthog-js';
-import jwt_decode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 
 function GoogleLoginButton({styling}) {
   const [userInfo, setUserInfo] = useUserInfo('userInfo');
 
   const handleLoginSuccess = (response) => {
     console.log('Login success', response);
-    const decodedEmail = jwt_decode(response.credential);
+    const decodedEmail = jwtDecode(response.credential);
     setUserInfo({ email: decodedEmail.email });
     posthog.alias(decodedEmail.email);
     window.location.reload(false);
